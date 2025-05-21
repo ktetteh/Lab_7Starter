@@ -82,7 +82,7 @@ describe('Basic user flow for Website', () => {
     console.log('Checking number of items in cart on screen...');
     await page.evaluate(() =>{
       localStorage.setItem('cart', JSON.stringify([]));
-      location.reload()
+      location.reload();
     });
     await page.waitForSelector('product-item');
 
